@@ -1,5 +1,5 @@
 import pkg_resources
-from symspellpy import SymSpell, Verbosity
+from symspellpy import SymSpell, Verbosity #  symspellpy==6.7.0
 
 # An average of 5 letter word has about 3M possible errors within a maximum edit distance of 3
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
