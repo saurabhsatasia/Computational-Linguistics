@@ -25,6 +25,7 @@ class ClientService:
 
     def processAudioFile(self):
         outputResponseObj = {}
+        inputFileTranscriptedOp = {}
         for val in self.fileList:
             inputFileTranscriptedOp = generateTranscript(os.path.join(self.FolderPath,val), self.separatedOutputFiles)
         print(inputFileTranscriptedOp)
@@ -90,7 +91,7 @@ def getInputFIle():
 def processInputFile():
     opResponseObj = clntApp.processAudioFile()
     jsonStr = json.dumps(opResponseObj, ensure_ascii=False).encode('utf8')
-    print(jsonStr.decode())
+    # print(jsonStr.decode())
     return Response(jsonStr.decode())
     # return Response()
 
