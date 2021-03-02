@@ -8,7 +8,7 @@ recognizer = sr.Recognizer()
 
 # a function that splits audio file files into chunks
 # and applies speech recognition
-def generateTranscipt(path, folderPath):
+def generateTranscript(path, folderPath):
     """Splitting the large audio files into chunks
     and apply speech recognition on each of these chunks"""
     # open the audio file using pydub
